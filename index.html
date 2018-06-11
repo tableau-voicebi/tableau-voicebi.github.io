@@ -78,31 +78,31 @@ responsiveVoice.speak('Hi. Interact with the dashboard by saying the following c
 //Make East selection
 function selectEast()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('Conference', 'EAST', 'REPLACE'); 
+	activeSheet.getWorksheets().selectMarksAsync('Conference', 'EAST', 'REPLACE'); 
 	}
 	
 
 //Make West selection
 function selectWest()
 	{
-	activeSheet.getWorksheets()[1].selectMarksAsync('Conference', 'WEST', 'REPLACE'); 
+	activeSheet.getWorksheets().selectMarksAsync('Conference', 'WEST', 'REPLACE'); 
 	}
 
 //Clear selection
 function clearSelection() {
-  activeSheet.getWorksheets()[1].clearSelectedMarksAsync('Conference');
+  activeSheet.getWorksheets().clearSelectedMarksAsync('Conference');
 }    	
 	
 	
 	
 //Filter East Conference
 function filterEast() {
- activeSheet.getWorksheets()[1].applyFilterAsync('Conference','EAST', tableau.FilterUpdateType.REPLACE);
+ activeSheet.getWorksheets().applyFilterAsync('Conference','EAST', tableau.FilterUpdateType.REPLACE);
 }   
 
 //Clear filter
 function clearFilters() {
-  activeSheet.getWorksheets()[1].clearFilterAsync('Conference');
+  activeSheet.getWorksheets().clearFilterAsync('Conference');
 }   
 
 //Export Image
